@@ -50,13 +50,6 @@ public class SkinManager : MonoBehaviour
         GenerateSkin();
     }
 
-
-    void LateUpdate()
-    {
-        
-        //GenerateSkin();
-    }
-
     void DropdownOptionUpdate()
     {
         
