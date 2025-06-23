@@ -1,0 +1,2899 @@
+fileFormatVersion: 2
+guid: 58514606638996445989efcccb48c4e7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 840413723498006627
+    second: kiddo_0
+  - first:
+      213: -9076452163825222296
+    second: kiddo_1
+  - first:
+      213: 1111533913879206335
+    second: kiddo_2
+  - first:
+      213: -5142139393626873846
+    second: kiddo_3
+  - first:
+      213: -6428955437817585256
+    second: kiddo_4
+  - first:
+      213: 420124603232192991
+    second: kiddo_5
+  - first:
+      213: -4598186902064818727
+    second: kiddo_6
+  - first:
+      213: -3605501034341383437
+    second: kiddo_7
+  - first:
+      213: 1511649332550361331
+    second: kiddo_8
+  - first:
+      213: 9117011322277885006
+    second: kiddo_9
+  - first:
+      213: -211469267219367334
+    second: kiddo_10
+  - first:
+      213: -2775773415536090333
+    second: kiddo_11
+  - first:
+      213: -2635512982607640654
+    second: kiddo_12
+  - first:
+      213: 1206726786906593761
+    second: kiddo_13
+  - first:
+      213: 7591043280562897784
+    second: kiddo_14
+  - first:
+      213: -243794494068373530
+    second: kiddo_15
+  - first:
+      213: 2076982187536147146
+    second: kiddo_16
+  - first:
+      213: 7724026281609836313
+    second: kiddo_17
+  - first:
+      213: 961199170873523177
+    second: kiddo_18
+  - first:
+      213: -2446475118946360778
+    second: kiddo_19
+  - first:
+      213: 5201502826721365869
+    second: kiddo_20
+  - first:
+      213: -5682868549062881278
+    second: kiddo_21
+  - first:
+      213: -3187342095995488867
+    second: kiddo_22
+  - first:
+      213: -4144619613232619396
+    second: kiddo_23
+  - first:
+      213: -3360892426860016686
+    second: kiddo_24
+  - first:
+      213: -3625088991691424637
+    second: kiddo_25
+  - first:
+      213: 8584451845860695724
+    second: kiddo_26
+  - first:
+      213: -5890832597199847489
+    second: kiddo_27
+  - first:
+      213: -2155935887008183965
+    second: kiddo_28
+  - first:
+      213: -7244414579608323624
+    second: kiddo_29
+  - first:
+      213: 3088178638031946409
+    second: kiddo_30
+  - first:
+      213: -8242240596200676212
+    second: kiddo_31
+  - first:
+      213: 5161437060177848811
+    second: kiddo_32
+  - first:
+      213: 7680684637207939638
+    second: kiddo_33
+  - first:
+      213: -4335135307094194999
+    second: kiddo_34
+  - first:
+      213: -5122825793375802757
+    second: kiddo_35
+  - first:
+      213: 1076271475274585948
+    second: kiddo_36
+  - first:
+      213: -1912197675170192452
+    second: kiddo_37
+  - first:
+      213: -4359521600996817952
+    second: kiddo_38
+  - first:
+      213: -328874381180814664
+    second: kiddo_39
+  - first:
+      213: -2686708566390001450
+    second: kiddo_40
+  - first:
+      213: 5448054484089000121
+    second: kiddo_41
+  - first:
+      213: 3603846513267847656
+    second: kiddo_42
+  - first:
+      213: 1753934050807349533
+    second: kiddo_43
+  - first:
+      213: -7592802308909169975
+    second: kiddo_44
+  - first:
+      213: 3904831038058012017
+    second: kiddo_45
+  - first:
+      213: -1894545202393354856
+    second: kiddo_46
+  - first:
+      213: 6636862892350700652
+    second: kiddo_47
+  - first:
+      213: -3243240321814060201
+    second: kiddo_48
+  - first:
+      213: -5790336799066490532
+    second: kiddo_49
+  - first:
+      213: 6875589811145342844
+    second: kiddo_50
+  - first:
+      213: 1494448768563028168
+    second: kiddo_51
+  - first:
+      213: 916617998407100120
+    second: kiddo_52
+  - first:
+      213: -7985372802172504807
+    second: kiddo_53
+  - first:
+      213: 8790405817586014657
+    second: kiddo_54
+  - first:
+      213: 3616767059754720385
+    second: kiddo_55
+  - first:
+      213: -3500224982355266563
+    second: kiddo_56
+  - first:
+      213: -5953162803535844356
+    second: kiddo_57
+  - first:
+      213: -2227964379549718228
+    second: kiddo_58
+  - first:
+      213: 6311322890896164286
+    second: kiddo_59
+  - first:
+      213: 2206800520237923714
+    second: kiddo_60
+  - first:
+      213: 6198222105951111120
+    second: kiddo_61
+  - first:
+      213: -6358546434088767398
+    second: kiddo_62
+  - first:
+      213: -1630174886658331687
+    second: kiddo_63
+  - first:
+      213: 3389584861626482343
+    second: kiddo_64
+  - first:
+      213: 7274739711273655881
+    second: kiddo_65
+  - first:
+      213: 4601844638947810951
+    second: kiddo_66
+  - first:
+      213: 1703624015232488025
+    second: kiddo_67
+  - first:
+      213: -1371769900076738221
+    second: kiddo_68
+  - first:
+      213: 4134840076605118903
+    second: kiddo_69
+  - first:
+      213: 1985362259974468400
+    second: kiddo_70
+  - first:
+      213: -216017561502600101
+    second: kiddo_71
+  - first:
+      213: -402810778745828086
+    second: kiddo_72
+  - first:
+      213: 2986753040517716536
+    second: kiddo_73
+  - first:
+      213: -1084610949052949838
+    second: kiddo_74
+  - first:
+      213: -8035386161663026139
+    second: kiddo_75
+  - first:
+      213: -1347632045877848834
+    second: kiddo_76
+  - first:
+      213: 253962752310350108
+    second: kiddo_77
+  - first:
+      213: -6598276049334487410
+    second: kiddo_78
+  - first:
+      213: 2377785660255088086
+    second: kiddo_79
+  - first:
+      213: -3251198468292233131
+    second: kiddo_80
+  - first:
+      213: -3753065011784625264
+    second: kiddo_81
+  - first:
+      213: -8736488657307086076
+    second: kiddo_82
+  - first:
+      213: 7598546935833672051
+    second: kiddo_83
+  - first:
+      213: 6784505088748605884
+    second: kiddo_84
+  - first:
+      213: 1637295872544875386
+    second: kiddo_85
+  - first:
+      213: -4606920007157838176
+    second: kiddo_86
+  - first:
+      213: 9203191879389910729
+    second: kiddo_87
+  - first:
+      213: 719519615795613929
+    second: kiddo_88
+  - first:
+      213: -1595413586216804908
+    second: kiddo_89
+  - first:
+      213: -6823707256953520156
+    second: kiddo_90
+  - first:
+      213: 9002027748777713968
+    second: kiddo_91
+  - first:
+      213: 1968054474132041414
+    second: kiddo_92
+  - first:
+      213: 4090511683669285387
+    second: kiddo_93
+  - first:
+      213: 2955048372598868769
+    second: kiddo_94
+  - first:
+      213: 9090195872812089901
+    second: kiddo_95
+  - first:
+      213: 797359935531141976
+    second: kiddo_96
+  - first:
+      213: -1394498357095904941
+    second: kiddo_97
+  - first:
+      213: -1746934927662667158
+    second: kiddo_98
+  - first:
+      213: 658639678434229748
+    second: kiddo_99
+  - first:
+      213: -2019500253544035354
+    second: kiddo_100
+  - first:
+      213: -3615533013202925172
+    second: kiddo_101
+  - first:
+      213: 781697809367102148
+    second: kiddo_102
+  - first:
+      213: -1100267650764216158
+    second: kiddo_103
+  - first:
+      213: 3390459694235358880
+    second: kiddo_104
+  - first:
+      213: 7143044080925097845
+    second: kiddo_105
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kiddo_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 425
+        width: 164
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368467d24dfb9ab00800000000000000
+      internalID: 840413723498006627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 425
+        width: 164
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d3f5a98d6f90280800000000000000
+      internalID: -9076452163825222296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_2
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 422
+        width: 164
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9d19c9436fc6f00800000000000000
+      internalID: 1111533913879206335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_3
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 422
+        width: 50
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00e359377373a8b0800000000000000
+      internalID: -5142139393626873846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_4
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 422
+        width: 61
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89121146713c7c6a0800000000000000
+      internalID: -6428955437817585256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_5
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 418
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd98e09c91594d500800000000000000
+      internalID: 420124603232192991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_6
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 417
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d59293ff55ff20c0800000000000000
+      internalID: -4598186902064818727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_7
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 417
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f247ca79efa6fdc0800000000000000
+      internalID: -3605501034341383437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_8
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 417
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0ee931f057af410800000000000000
+      internalID: 1511649332550361331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_9
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 408
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44769d5e71268e70800000000000000
+      internalID: 9117011322277885006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_10
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 407
+        width: 76
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a3a7662d5b01df0800000000000000
+      internalID: -211469267219367334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_11
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 461
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323aff509c87a79d0800000000000000
+      internalID: -2775773415536090333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_12
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 461
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7cdb6e7e6cc6bd0800000000000000
+      internalID: -2635512982607640654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_13
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 433
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e914828e972fb010800000000000000
+      internalID: 1206726786906593761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_14
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 419
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873419405adc85960800000000000000
+      internalID: 7591043280562897784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_15
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 389
+        width: 64
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7cbd6033edd9cf0800000000000000
+      internalID: -243794494068373530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_16
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 389
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2e7e49b4ce2dc10800000000000000
+      internalID: 2076982187536147146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_17
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 449
+        width: 71
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917b22fbaf0413b60800000000000000
+      internalID: 7724026281609836313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 211
+        width: 157
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ebf052ad8dd65d00800000000000000
+      internalID: 961199170873523177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_19
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 211
+        width: 157
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632ee5f57df5c0ed0800000000000000
+      internalID: -2446475118946360778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_20
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 384
+        width: 151
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6fcaec13437f2840800000000000000
+      internalID: 5201502826721365869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_21
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 384
+        width: 62
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2001edbe9256221b0800000000000000
+      internalID: -5682868549062881278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_22
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 384
+        width: 63
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d953a8e304944c3d0800000000000000
+      internalID: -3187342095995488867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_23
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 385
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c702720cb6a5b76c0800000000000000
+      internalID: -4144619613232619396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_24
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 385
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db45b00526bb51d0800000000000000
+      internalID: -3360892426860016686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_25
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 374
+        width: 64
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cbd03c4c811bdc0800000000000000
+      internalID: -3625088991691424637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_26
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 342
+        width: 84
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae19ffa879122770800000000000000
+      internalID: 8584451845860695724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_27
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 342
+        width: 84
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf7c9cb6fe8f3ea0800000000000000
+      internalID: -5890832597199847489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_28
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 342
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3694c50cbb39412e0800000000000000
+      internalID: -2155935887008183965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_29
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 333
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d9f8c8825ba67b90800000000000000
+      internalID: -7244414579608323624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_30
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 329
+        width: 84
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a208d20c1a6bda20800000000000000
+      internalID: 3088178638031946409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_31
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 367
+        width: 79
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84a726d8ddad9d80800000000000000
+      internalID: -8242240596200676212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_32
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 369
+        width: 73
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9ef66e8ab11a740800000000000000
+      internalID: 5161437060177848811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_33
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 355
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a4498cbf5479a60800000000000000
+      internalID: 7680684637207939638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_34
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 342
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4856f186186d3c0800000000000000
+      internalID: -4335135307094194999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_35
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 315
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a60a3351118e8b0800000000000000
+      internalID: -5122825793375802757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_36
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 375
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5790a5543fafee00800000000000000
+      internalID: 1076271475274585948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_37
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 368
+        width: 323
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3272f78528675e0800000000000000
+      internalID: -1912197675170192452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_38
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 345
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e341fd933edf73c0800000000000000
+      internalID: -4359521600996817952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_39
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 300
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8babdf52e7a9f6bf0800000000000000
+      internalID: -328874381180814664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 185
+        width: 156
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0335d2bc4e6bad0800000000000000
+      internalID: -2686708566390001450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_41
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 345
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b0591130b06b9b40800000000000000
+      internalID: 5448054484089000121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_42
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 345
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e13c505f4f630230800000000000000
+      internalID: 3603846513267847656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_43
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 345
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1185d9f9b9375810800000000000000
+      internalID: 1753934050807349533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_44
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 344
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c204b74782f0a690800000000000000
+      internalID: -7592802308909169975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_45
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d1e53f32fb03630800000000000000
+      internalID: 3904831038058012017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_46
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 280
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d6c681d2935b5e0800000000000000
+      internalID: -1894545202393354856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_47
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 343
+        width: 58
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cf88113afda1c50800000000000000
+      internalID: 6636862892350700652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_48
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 318
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753ac095c12bdf2d0800000000000000
+      internalID: -3243240321814060201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_49
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 345
+        width: 51
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59f4c91c5794afa0800000000000000
+      internalID: -5790336799066490532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_50
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 318
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ffc9a31800b6f50800000000000000
+      internalID: 6875589811145342844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_51
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 267
+        width: 69
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c02831bc395db410800000000000000
+      internalID: 1494448768563028168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_52
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 292
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6e8cd863b78bc00800000000000000
+      internalID: 916617998407100120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_53
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 185
+        width: 182
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9153177aeb14e2190800000000000000
+      internalID: -7985372802172504807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_54
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 299
+        width: 64
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9ddbc748bcdf970800000000000000
+      internalID: 8790405817586014657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_55
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 299
+        width: 63
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c93087a76513230800000000000000
+      internalID: 3616767059754720385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_56
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 299
+        width: 63
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df334cc6ce3bc6fc0800000000000000
+      internalID: -3500224982355266563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_57
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 296
+        width: 51
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb6d2da8fd126da0800000000000000
+      internalID: -5953162803535844356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_58
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 280
+        width: 79
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2927b8733ea411e0800000000000000
+      internalID: -2227964379549718228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_59
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 280
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb548aefab2569750800000000000000
+      internalID: 6311322890896164286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_60
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 280
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28dbdea816120ae10800000000000000
+      internalID: 2206800520237923714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_61
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 228
+        width: 77
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d780307a22840650800000000000000
+      internalID: 6198222105951111120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_62
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 264
+        width: 65
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50ff4c05b7e1c7a0800000000000000
+      internalID: -6358546434088767398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_63
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 239
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dba7fed3947069e0800000000000000
+      internalID: -1630174886658331687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_64
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 177
+        width: 170
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aeb94d09793a0f20800000000000000
+      internalID: 3389584861626482343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_65
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 158
+        width: 120
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ed4e3693115f460800000000000000
+      internalID: 7274739711273655881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_66
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 141
+        width: 120
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e150841590ddf30800000000000000
+      internalID: 4601844638947810951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_67
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 141
+        width: 120
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952d1c2040d74a710800000000000000
+      internalID: 1703624015232488025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_68
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 179
+        width: 69
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3595a583b8e76fce0800000000000000
+      internalID: -1371769900076738221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_69
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 176
+        width: 69
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9d8117427e16930800000000000000
+      internalID: 4134840076605118903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_70
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 161
+        width: 65
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033be30e47c6d8b10800000000000000
+      internalID: 1985362259974468400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_71
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 226
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54346d1c2d800df0800000000000000
+      internalID: -216017561502600101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_72
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 218
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d082d1bbde86af0800000000000000
+      internalID: -402810778745828086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_73
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 214
+        width: 62
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a50ebd014137920800000000000000
+      internalID: 2986753040517716536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_74
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 157
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba133e9610b2f0f0800000000000000
+      internalID: -1084610949052949838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_75
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1
+        width: 157
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c5cf8fbd29c7090800000000000000
+      internalID: -8035386161663026139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_76
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 2
+        width: 165
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef494895bcf3c4de0800000000000000
+      internalID: -1347632045877848834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_77
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 2
+        width: 156
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1193a517c1468300800000000000000
+      internalID: 253962752310350108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_78
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 2
+        width: 157
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86337d64e63e64a0800000000000000
+      internalID: -6598276049334487410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_79
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2
+        width: 123
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dda58fb5779ff020800000000000000
+      internalID: 2377785660255088086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_80
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 141
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558b52bf73c61e2d0800000000000000
+      internalID: -3251198468292233131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_81
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 89
+        width: 73
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09351a1a14f6aebc0800000000000000
+      internalID: -3753065011784625264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_82
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 88
+        width: 69
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4035bf4aad1c1c680800000000000000
+      internalID: -8736488657307086076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_83
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 73
+        width: 69
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379bf77ed26737960800000000000000
+      internalID: 7598546935833672051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_84
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 150
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1d0bfae67672e50800000000000000
+      internalID: 6784505088748605884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_85
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 144
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73204bdbe7d8b610800000000000000
+      internalID: 1637295872544875386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_86
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 140
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae87b879aee010c0800000000000000
+      internalID: -4606920007157838176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_87
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 134
+        width: 62
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c69bc2f04e48bf70800000000000000
+      internalID: 9203191879389910729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_88
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 2
+        width: 120
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e05c64474f3cf900800000000000000
+      internalID: 719519615795613929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_89
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 2
+        width: 120
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd17b3dbc3fbd9e0800000000000000
+      internalID: -1595413586216804908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_90
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 92
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4efb70247625d41a0800000000000000
+      internalID: -6823707256953520156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_91
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 89
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031ea10fa80adec70800000000000000
+      internalID: 9002027748777713968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_92
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 73
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce2245fd1fef4b10800000000000000
+      internalID: 1968054474132041414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_93
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 72
+        width: 68
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a51be24ba64c830800000000000000
+      internalID: 4090511683669285387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_94
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 73
+        width: 72
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b0ade96d0720920800000000000000
+      internalID: 2955048372598868769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_95
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 68
+        width: 72
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22cfa10cfcd62e70800000000000000
+      internalID: 9090195872812089901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_96
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 68
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b467303aac01b00800000000000000
+      internalID: 797359935531141976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_97
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 2
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359ce61f12fb5ace0800000000000000
+      internalID: -1394498357095904941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_98
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 2
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6aa1fe50f3a1c7e0800000000000000
+      internalID: -1746934927662667158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_99
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 2
+        width: 73
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fdbc044c45f32900800000000000000
+      internalID: 658639678434229748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_100
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2
+        width: 86
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb42bb183b49f3e0800000000000000
+      internalID: -2019500253544035354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_101
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 2
+        width: 86
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89875261eb03ddc0800000000000000
+      internalID: -3615533013202925172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_102
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 1
+        width: 68
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2f609140629da00800000000000000
+      internalID: 781697809367102148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_103
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 2
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8685ea6601bb0f0800000000000000
+      internalID: -1100267650764216158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_104
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 2
+        width: 72
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a69d24e0255d0f20800000000000000
+      internalID: 3390459694235358880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kiddo_105
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2
+        width: 61
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f3f720fb0312360800000000000000
+      internalID: 7143044080925097845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kiddo_0: 840413723498006627
+      kiddo_1: -9076452163825222296
+      kiddo_10: -211469267219367334
+      kiddo_100: -2019500253544035354
+      kiddo_101: -3615533013202925172
+      kiddo_102: 781697809367102148
+      kiddo_103: -1100267650764216158
+      kiddo_104: 3390459694235358880
+      kiddo_105: 7143044080925097845
+      kiddo_11: -2775773415536090333
+      kiddo_12: -2635512982607640654
+      kiddo_13: 1206726786906593761
+      kiddo_14: 7591043280562897784
+      kiddo_15: -243794494068373530
+      kiddo_16: 2076982187536147146
+      kiddo_17: 7724026281609836313
+      kiddo_18: 961199170873523177
+      kiddo_19: -2446475118946360778
+      kiddo_2: 1111533913879206335
+      kiddo_20: 5201502826721365869
+      kiddo_21: -5682868549062881278
+      kiddo_22: -3187342095995488867
+      kiddo_23: -4144619613232619396
+      kiddo_24: -3360892426860016686
+      kiddo_25: -3625088991691424637
+      kiddo_26: 8584451845860695724
+      kiddo_27: -5890832597199847489
+      kiddo_28: -2155935887008183965
+      kiddo_29: -7244414579608323624
+      kiddo_3: -5142139393626873846
+      kiddo_30: 3088178638031946409
+      kiddo_31: -8242240596200676212
+      kiddo_32: 5161437060177848811
+      kiddo_33: 7680684637207939638
+      kiddo_34: -4335135307094194999
+      kiddo_35: -5122825793375802757
+      kiddo_36: 1076271475274585948
+      kiddo_37: -1912197675170192452
+      kiddo_38: -4359521600996817952
+      kiddo_39: -328874381180814664
+      kiddo_4: -6428955437817585256
+      kiddo_40: -2686708566390001450
+      kiddo_41: 5448054484089000121
+      kiddo_42: 3603846513267847656
+      kiddo_43: 1753934050807349533
+      kiddo_44: -7592802308909169975
+      kiddo_45: 3904831038058012017
+      kiddo_46: -1894545202393354856
+      kiddo_47: 6636862892350700652
+      kiddo_48: -3243240321814060201
+      kiddo_49: -5790336799066490532
+      kiddo_5: 420124603232192991
+      kiddo_50: 6875589811145342844
+      kiddo_51: 1494448768563028168
+      kiddo_52: 916617998407100120
+      kiddo_53: -7985372802172504807
+      kiddo_54: 8790405817586014657
+      kiddo_55: 3616767059754720385
+      kiddo_56: -3500224982355266563
+      kiddo_57: -5953162803535844356
+      kiddo_58: -2227964379549718228
+      kiddo_59: 6311322890896164286
+      kiddo_6: -4598186902064818727
+      kiddo_60: 2206800520237923714
+      kiddo_61: 6198222105951111120
+      kiddo_62: -6358546434088767398
+      kiddo_63: -1630174886658331687
+      kiddo_64: 3389584861626482343
+      kiddo_65: 7274739711273655881
+      kiddo_66: 4601844638947810951
+      kiddo_67: 1703624015232488025
+      kiddo_68: -1371769900076738221
+      kiddo_69: 4134840076605118903
+      kiddo_7: -3605501034341383437
+      kiddo_70: 1985362259974468400
+      kiddo_71: -216017561502600101
+      kiddo_72: -402810778745828086
+      kiddo_73: 2986753040517716536
+      kiddo_74: -1084610949052949838
+      kiddo_75: -8035386161663026139
+      kiddo_76: -1347632045877848834
+      kiddo_77: 253962752310350108
+      kiddo_78: -6598276049334487410
+      kiddo_79: 2377785660255088086
+      kiddo_8: 1511649332550361331
+      kiddo_80: -3251198468292233131
+      kiddo_81: -3753065011784625264
+      kiddo_82: -8736488657307086076
+      kiddo_83: 7598546935833672051
+      kiddo_84: 6784505088748605884
+      kiddo_85: 1637295872544875386
+      kiddo_86: -4606920007157838176
+      kiddo_87: 9203191879389910729
+      kiddo_88: 719519615795613929
+      kiddo_89: -1595413586216804908
+      kiddo_9: 9117011322277885006
+      kiddo_90: -6823707256953520156
+      kiddo_91: 9002027748777713968
+      kiddo_92: 1968054474132041414
+      kiddo_93: 4090511683669285387
+      kiddo_94: 2955048372598868769
+      kiddo_95: 9090195872812089901
+      kiddo_96: 797359935531141976
+      kiddo_97: -1394498357095904941
+      kiddo_98: -1746934927662667158
+      kiddo_99: 658639678434229748
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
