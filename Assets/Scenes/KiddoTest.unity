@@ -3235,8 +3235,7 @@ MonoBehaviour:
   JumpAnimation:
   - interacted/jump01
   - interacted/jump02
-  IsSelected: 0
-  MoveSpeed: 1
+  MoveSpeed: 0.5
   IsEnabled: 0
   HorizontalMoveAxis: Horizontal
   VerticalMoveAxis: Vertical

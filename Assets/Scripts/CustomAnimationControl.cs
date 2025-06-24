@@ -108,8 +108,9 @@ public class CustomAnimationControl : MonoBehaviour
     public void MoveOnClick(Vector2 clickedposition)
     {
             Debug.Log("Moving " + gameObject.name + " to position: " + clickedposition);
-            transform.DOMove(new Vector3(clickedposition.x, clickedposition.y), MoveSpeed);
-            movementInterval = MoveSpeed;
+            float distance = Vector2.Distance(clickedposition, transform.position);
+            transform.DOMove(new Vector3(clickedposition.x, clickedposition.y), distance * MoveSpeed);
+            movementInterval = distance * MoveSpeed;
             IsMoving = true;
             spineAnimationState.SetAnimation(0, WalkAnimation[Random.Range(0, WalkAnimation.Count)], true);
 
