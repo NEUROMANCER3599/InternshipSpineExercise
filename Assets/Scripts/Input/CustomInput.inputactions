@@ -1,0 +1,54 @@
+{
+    "name": "CustomInput",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "8c834ff8-515e-4d8c-9518-01eca8ff9f5c",
+            "actions": [
+                {
+                    "name": "Selection",
+                    "type": "Button",
+                    "id": "bedd8e6f-4ed4-4eb0-94ae-7bb81038cd92",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UnSelect",
+                    "type": "Button",
+                    "id": "4e890193-412d-4d9c-82d0-5654c9091eca",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d2dd5d24-f86c-4262-a957-d84ddb514256",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f28f857-a74a-49c7-afd9-35332e2b514f",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnSelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

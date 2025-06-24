@@ -1,17 +1,24 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Spine.Unity;
+using DG.Tweening;
+using System.Collections;
 
 
 public class CustomAnimationControl : MonoBehaviour
 {
-    [Header("Animations")]
+    [Header("Animations List")]
     [SpineAnimation] public List<string> IdleAnimation;
     [SpineAnimation] public List<string> WalkAnimation;
     [SpineAnimation] public List<string> InteractAnimation;
     [SpineAnimation] public List<string> JumpAnimation;
 
-    [Header("Key Control")]
+    [Header("Mouse Control")]
+    public float MoveSpeed = 1f;
+    float movementInterval;
+
+    [Header("Keyboard Control (For Debugging)")]
+    [SerializeField] private bool IsEnabled;
     [SerializeField] private string HorizontalMoveAxis = "Horizontal";
     [SerializeField] private string VerticalMoveAxis = "Vertical";
     [SerializeField] private KeyCode JumpKey = KeyCode.Space;
@@ -37,10 +44,31 @@ public class CustomAnimationControl : MonoBehaviour
 
     void Update()
     {
+        if (IsEnabled)
+        {
+            KeyBoardControl();
+        }
+
+        if(movementInterval > 0)
+        {
+            movementInterval -= 1f * Time.deltaTime;
+        }
+        else
+        {
+            if (IsMoving)
+            {
+                IsMoving = false;
+                spineAnimationState.AddAnimation(0, IdleAnimation[Random.Range(0, IdleAnimation.Count)], true, 0);
+            }
+        }
+    }
+
+    void KeyBoardControl()
+    {
         if (Input.GetKeyDown(JumpKey) && !IsMoving) //Playing Jumping Animation
         {
             spineAnimationState.SetAnimation(0, JumpAnimation[Random.Range(0, JumpAnimation.Count)], false);
-            spineAnimationState.AddAnimation(0, IdleAnimation[Random.Range(0, IdleAnimation.Count)], true,0);
+            spineAnimationState.AddAnimation(0, IdleAnimation[Random.Range(0, IdleAnimation.Count)], true, 0);
         }
 
         if (Input.GetKeyDown(InteractKey) && !IsMoving) //Playing Interaction Animation
@@ -49,7 +77,7 @@ public class CustomAnimationControl : MonoBehaviour
             spineAnimationState.AddAnimation(0, IdleAnimation[Random.Range(0, IdleAnimation.Count)], true, 0);
         }
 
-        if(Input.GetAxis(HorizontalMoveAxis) != 0 || Input.GetAxis(VerticalMoveAxis) != 0) //Playing Moving Animation
+        if (Input.GetAxis(HorizontalMoveAxis) != 0 || Input.GetAxis(VerticalMoveAxis) != 0) //Playing Moving Animation
         {
             if (!IsMoving)
             {
@@ -61,7 +89,7 @@ public class CustomAnimationControl : MonoBehaviour
             {
                 transform.localScale = new Vector3(-1, 1, 1);
             }
-            else if(Input.GetAxis(HorizontalMoveAxis) > 0) //Turning Right
+            else if (Input.GetAxis(HorizontalMoveAxis) > 0) //Turning Right
             {
                 transform.localScale = new Vector3(1, 1, 1);
             }
@@ -75,5 +103,43 @@ public class CustomAnimationControl : MonoBehaviour
                 spineAnimationState.SetAnimation(0, IdleAnimation[Random.Range(0, IdleAnimation.Count)], true);
             }
         }
+    } //For Debugging
+
+    public void MoveOnClick(Vector2 clickedposition)
+    {
+            transform.DOMove(new Vector3(clickedposition.x, clickedposition.y), MoveSpeed);
+            movementInterval = MoveSpeed;
+            IsMoving = true;
+            spineAnimationState.SetAnimation(0, WalkAnimation[Random.Range(0, WalkAnimation.Count)], true);
+
+            if(clickedposition.x > transform.position.x)
+            {
+                //transform.localScale = new Vector3(1, 1, 1);
+                skeleton.ScaleX = 1;
+            }
+            else
+            {
+                //transform.localScale = new Vector3(-1, 1, 1);
+                skeleton.ScaleX = -1;
+            }
+    }
+
+
+    public void OnClicked()
+    {
+        Debug.Log("Object Selected");
+
+        //PlayRandomAnimation From Interact and Jump Anim list
+        int RandomGroup = Random.Range(0, 2);
+
+        switch (RandomGroup)
+        {
+            case 0: spineAnimationState.SetAnimation(0, JumpAnimation[Random.Range(0, JumpAnimation.Count)], false); break;
+            case 1: spineAnimationState.SetAnimation(0, InteractAnimation[Random.Range(0, InteractAnimation.Count)], false); break;
+            default: spineAnimationState.SetAnimation(0, JumpAnimation[Random.Range(0, JumpAnimation.Count)], false); break;
+        }
+
+        spineAnimationState.AddAnimation(0, IdleAnimation[Random.Range(0, IdleAnimation.Count)], true, 0);
+
     }
 }
