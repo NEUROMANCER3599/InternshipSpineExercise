@@ -107,6 +107,7 @@ public class CustomAnimationControl : MonoBehaviour
 
     public void MoveOnClick(Vector2 clickedposition)
     {
+            Debug.Log("Moving " + gameObject.name + " to position: " + clickedposition);
             transform.DOMove(new Vector3(clickedposition.x, clickedposition.y), MoveSpeed);
             movementInterval = MoveSpeed;
             IsMoving = true;
@@ -114,12 +115,10 @@ public class CustomAnimationControl : MonoBehaviour
 
             if(clickedposition.x > transform.position.x)
             {
-                //transform.localScale = new Vector3(1, 1, 1);
                 skeleton.ScaleX = 1;
             }
             else
             {
-                //transform.localScale = new Vector3(-1, 1, 1);
                 skeleton.ScaleX = -1;
             }
     }
@@ -127,7 +126,7 @@ public class CustomAnimationControl : MonoBehaviour
 
     public void OnClicked()
     {
-        Debug.Log("Object Selected");
+        Debug.Log(gameObject.name + " Selected");
 
         //PlayRandomAnimation From Interact and Jump Anim list
         int RandomGroup = Random.Range(0, 2);
