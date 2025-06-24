@@ -7,12 +7,13 @@ using System.Collections;
 
 public class CustomAnimationControl : MonoBehaviour
 {
-    [Header("Animations List")]
-    [SpineAnimation] public List<string> IdleAnimation;
-    [SpineAnimation] public List<string> WalkAnimation;
-    [SpineAnimation] public List<string> InteractAnimation;
+    [Header("Parameters")]
+    public string IdleAnimationGroupKeyword = "idle";
+    public string InteractionAnimationGroupKeyword = "interacted";
+    public string MoveAnimationGroupKeyword = "walk";
 
     [Header("Movement Control")]
+    [Tooltip("Set to 0 to disable Movement")]
     public float MoveSpeed = 1f;
     float movementInterval;
     bool IsMoving;
@@ -21,7 +22,9 @@ public class CustomAnimationControl : MonoBehaviour
     SkeletonAnimation skeletonAnimation;
     public Spine.AnimationState spineAnimationState;
     public Spine.Skeleton skeleton;
-
+    public Spine.SkeletonData skeletonData;
+    [Tooltip("Do Not Edit | This list is auto generated")]
+    [SpineAnimation] public List<string> AllAnimation;
 
 
     void Start()
@@ -29,15 +32,45 @@ public class CustomAnimationControl : MonoBehaviour
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         spineAnimationState = skeletonAnimation.AnimationState;
         skeleton = skeletonAnimation.Skeleton;
-
-        spineAnimationState.SetAnimation(0, IdleAnimation[Random.Range(0,IdleAnimation.Count)],true);
+        skeletonData = skeleton.Data;
+        InitializeData();
+        spineAnimationState.SetAnimation(0,PlayRandomAnimationFromGroup(IdleAnimationGroupKeyword),true);
     }
 
+    void InitializeData()
+    {
+        if (AllAnimation != null)
+        {
+            AllAnimation.Clear();
+        }
+        foreach (var skin in skeletonData.Animations)
+        {
+            AllAnimation.Add(skin.ToString());
+        }
+    }
+
+    string PlayRandomAnimationFromGroup(string groupkeyword ) //Type Prefix of animation directory
+    {
+        List<string> FoundAnim = new List<string>();
+
+        foreach (string Anim in AllAnimation)
+        {
+            if (Anim.StartsWith(groupkeyword))
+            {
+                FoundAnim.Add(Anim);
+            }
+        }
+
+        if(FoundAnim == null)
+        {
+            FoundAnim = null;
+        }
+
+        return FoundAnim[Random.Range(0, FoundAnim.Count)];
+    }
 
     void Update()
     {
-
-
         if(movementInterval > 0)
         {
             movementInterval -= 1f * Time.deltaTime;
@@ -47,28 +80,32 @@ public class CustomAnimationControl : MonoBehaviour
             if (IsMoving)
             {
                 IsMoving = false;
-                spineAnimationState.AddAnimation(0, IdleAnimation[Random.Range(0, IdleAnimation.Count)], true, 0);
+                spineAnimationState.AddAnimation(0, PlayRandomAnimationFromGroup(IdleAnimationGroupKeyword), true, 0);
             }
         }
     }
 
     public void MoveOnClick(Vector2 clickedposition)
     {
-            Debug.Log("Moving " + gameObject.name + " to position: " + clickedposition);
-            float distance = Vector2.Distance(clickedposition, transform.position);
-            transform.DOMove(new Vector3(clickedposition.x, clickedposition.y), distance * MoveSpeed);
-            movementInterval = distance * MoveSpeed;
-            IsMoving = true;
-            spineAnimationState.SetAnimation(0, WalkAnimation[Random.Range(0, WalkAnimation.Count)], true);
+            if(MoveSpeed != 0)
+            {
+                Debug.Log("Moving " + gameObject.name + " to position: " + clickedposition);
+                float distance = Vector2.Distance(clickedposition, transform.position);
+                transform.DOMove(new Vector3(clickedposition.x, clickedposition.y), distance * MoveSpeed);
+                movementInterval = distance * MoveSpeed;
+                IsMoving = true;
+                spineAnimationState.SetAnimation(0, PlayRandomAnimationFromGroup(MoveAnimationGroupKeyword), true);
 
-            if(clickedposition.x > transform.position.x)
-            {
-                skeleton.ScaleX = 1;
+                if (clickedposition.x > transform.position.x)
+                {
+                    skeleton.ScaleX = 1;
+                }
+                else
+                {
+                    skeleton.ScaleX = -1;
+                }
             }
-            else
-            {
-                skeleton.ScaleX = -1;
-            }
+           
     }
 
 
@@ -78,9 +115,8 @@ public class CustomAnimationControl : MonoBehaviour
 
         int RandomGroup = Random.Range(0, 2);
 
-        spineAnimationState.SetAnimation(0, InteractAnimation[Random.Range(0, InteractAnimation.Count)], false);
-
-        spineAnimationState.AddAnimation(0, IdleAnimation[Random.Range(0, IdleAnimation.Count)], true, 0);
+        spineAnimationState.SetAnimation(0, PlayRandomAnimationFromGroup(InteractionAnimationGroupKeyword), false);
+        spineAnimationState.AddAnimation(0, PlayRandomAnimationFromGroup(IdleAnimationGroupKeyword), true,0);
 
     }
 }

@@ -5,7 +5,6 @@ public class CustomInputHandler : MonoBehaviour
 {
     private Camera _mainCamera;
     private GameObject SelectedObj;
-
     private void Awake()
     {
         _mainCamera = Camera.main;

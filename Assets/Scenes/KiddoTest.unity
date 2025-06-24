@@ -3225,16 +3225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6be18388708c884e83e9c1086a337e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IdleAnimation:
-  - idle/idle
-  - idle/look_around
-  WalkAnimation:
-  - walk/walk
-  InteractAnimation:
-  - interacted/wave
-  - interacted/jump01
-  - interacted/jump02
+  IdleAnimationGroupKeyword: idle
+  InteractionAnimationGroupKeyword: interacted
+  MoveAnimationGroupKeyword: walk
   MoveSpeed: 0.5
+  AllAnimation: []
 --- !u!114 &710427976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3247,7 +3242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c5d3e5356dc46b4dbe8117f3f11d263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRandomized: 1
+  IsRandomized: 0
   CustomizeSkinParts:
   - preset/town/shisuka
   - L_hand/town/yellow_balloon
