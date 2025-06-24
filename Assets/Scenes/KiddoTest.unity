@@ -3100,6 +3100,7 @@ GameObject:
   - component: {fileID: 710427971}
   - component: {fileID: 710427975}
   - component: {fileID: 710427976}
+  - component: {fileID: 710427978}
   - component: {fileID: 710427977}
   m_Layer: 0
   m_Name: Kiddo
@@ -3226,9 +3227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdleAnimationGroupKeyword: idle
-  InteractionAnimationGroupKeyword: interacted
-  MoveAnimationGroupKeyword: walk
-  MoveSpeed: 0.5
   AllAnimation: []
 --- !u!114 &710427976
 MonoBehaviour:
@@ -3242,7 +3240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c5d3e5356dc46b4dbe8117f3f11d263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRandomized: 0
+  IsRandomized: 1
   CustomizeSkinParts:
   - preset/town/shisuka
   - L_hand/town/yellow_balloon
@@ -3267,6 +3265,22 @@ MonoBehaviour:
   flipBy180DegreeRotation: 0
   skeletonRenderer: {fileID: 710427971}
   skeletonGraphic: {fileID: 0}
+--- !u!114 &710427978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710427970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0724373e533cb1044856d921b196164b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 1
+  MovementAnimGroupKeyword: walk
+  InteractedAnimGroupKeyword: interacted
+  AnimControl: {fileID: 0}
 --- !u!1 &727116482
 GameObject:
   m_ObjectHideFlags: 0

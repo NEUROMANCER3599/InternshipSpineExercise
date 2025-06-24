@@ -4,19 +4,15 @@ using Spine.Unity;
 using DG.Tweening;
 using System.Collections;
 
-
+public enum AnimPlayBackType
+{
+    Set,Add
+}
 public class CustomAnimationControl : MonoBehaviour
 {
     [Header("Parameters")]
     public string IdleAnimationGroupKeyword = "idle";
-    public string InteractionAnimationGroupKeyword = "interacted";
-    public string MoveAnimationGroupKeyword = "walk";
 
-    [Header("Movement Control")]
-    [Tooltip("Set to 0 to disable Movement")]
-    public float MoveSpeed = 1f;
-    float movementInterval;
-    bool IsMoving;
 
     [Header("System")]
     SkeletonAnimation skeletonAnimation;
@@ -34,7 +30,7 @@ public class CustomAnimationControl : MonoBehaviour
         skeleton = skeletonAnimation.Skeleton;
         skeletonData = skeleton.Data;
         InitializeData();
-        spineAnimationState.SetAnimation(0,PlayRandomAnimationFromGroup(IdleAnimationGroupKeyword),true);
+        PlayRandomAnimationFromGroup(AnimPlayBackType.Set, IdleAnimationGroupKeyword, true);
     }
 
     void InitializeData()
@@ -49,7 +45,7 @@ public class CustomAnimationControl : MonoBehaviour
         }
     }
 
-    string PlayRandomAnimationFromGroup(string groupkeyword ) //Type Prefix of animation directory
+    public void PlayRandomAnimationFromGroup(AnimPlayBackType playtype,string groupkeyword,bool SetLoop) //Type Prefix of animation directory
     {
         List<string> FoundAnim = new List<string>();
 
@@ -61,62 +57,22 @@ public class CustomAnimationControl : MonoBehaviour
             }
         }
 
-        if(FoundAnim == null)
+        switch (playtype)
         {
-            FoundAnim = null;
-        }
-
-        return FoundAnim[Random.Range(0, FoundAnim.Count)];
-    }
-
-    void Update()
-    {
-        if(movementInterval > 0)
-        {
-            movementInterval -= 1f * Time.deltaTime;
-        }
-        else
-        {
-            if (IsMoving)
-            {
-                IsMoving = false;
-                spineAnimationState.AddAnimation(0, PlayRandomAnimationFromGroup(IdleAnimationGroupKeyword), true, 0);
-            }
+            case AnimPlayBackType.Set: spineAnimationState.SetAnimation(0, FoundAnim[Random.Range(0,FoundAnim.Count)], SetLoop); break;
+            case AnimPlayBackType.Add: spineAnimationState.AddAnimation(0, FoundAnim[Random.Range(0, FoundAnim.Count)], SetLoop, 0); break;
         }
     }
 
-    public void MoveOnClick(Vector2 clickedposition)
+    
+    public void SetIdleAnim()
     {
-            if(MoveSpeed != 0)
-            {
-                Debug.Log("Moving " + gameObject.name + " to position: " + clickedposition);
-                float distance = Vector2.Distance(clickedposition, transform.position);
-                transform.DOMove(new Vector3(clickedposition.x, clickedposition.y), distance * MoveSpeed);
-                movementInterval = distance * MoveSpeed;
-                IsMoving = true;
-                spineAnimationState.SetAnimation(0, PlayRandomAnimationFromGroup(MoveAnimationGroupKeyword), true);
-
-                if (clickedposition.x > transform.position.x)
-                {
-                    skeleton.ScaleX = 1;
-                }
-                else
-                {
-                    skeleton.ScaleX = -1;
-                }
-            }
-           
+        PlayRandomAnimationFromGroup(AnimPlayBackType.Set, IdleAnimationGroupKeyword, true);
     }
 
-
-    public void OnClicked()
+    public void QueueIdleAnim()
     {
-        Debug.Log(gameObject.name + " Selected");
-
-        int RandomGroup = Random.Range(0, 2);
-
-        spineAnimationState.SetAnimation(0, PlayRandomAnimationFromGroup(InteractionAnimationGroupKeyword), false);
-        spineAnimationState.AddAnimation(0, PlayRandomAnimationFromGroup(IdleAnimationGroupKeyword), true,0);
-
+        PlayRandomAnimationFromGroup(AnimPlayBackType.Add, IdleAnimationGroupKeyword, true);
     }
+   
 }

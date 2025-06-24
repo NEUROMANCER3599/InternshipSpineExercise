@@ -21,21 +21,22 @@ public class CustomInputHandler : MonoBehaviour
             Debug.Log("Collider Clicked");
             SelectedObj = rayHit.collider.gameObject;
 
-            if (SelectedObj.GetComponentInParent<CustomAnimationControl>())
+            if (SelectedObj.GetComponentInParent<ActorBehavior>())
             {
-                CustomAnimationControl AnimControl = SelectedObj.GetComponentInParent<CustomAnimationControl>();
+                ActorBehavior Actor = SelectedObj.GetComponentInParent<ActorBehavior>();
 
-                AnimControl.OnClicked();
+                Actor.OnClicked();
             }
         }
         else
         {
             if(SelectedObj != null)
             {
-                if (SelectedObj.GetComponentInParent<CustomAnimationControl>())
+                if (SelectedObj.GetComponentInParent<ActorBehavior>())
                 {
-                    CustomAnimationControl AnimControl = SelectedObj.GetComponentInParent<CustomAnimationControl>();
-                    AnimControl.MoveOnClick(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
+                    ActorBehavior Actor = SelectedObj.GetComponentInParent<ActorBehavior>();
+
+                    Actor.MoveOnClick(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
                 }
             }
             
