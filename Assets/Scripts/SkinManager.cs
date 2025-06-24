@@ -1,138 +1,90 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Spine.Unity;
+using Spine.Unity.AttachmentTools;
 using TMPro;
-using NUnit.Framework.Internal;
-
-public enum KiddoSkins
-{
-    boy,girl,georgie,shinchan,shisuka,pirate1,pirate2
-}
-public enum KiddoHats
-{
-    none,bandana1, bandana2, bandana3
-}
-
-public enum KiddoItems
-{
-    none,redballoon,blueballoon,yellowballoon,purpleballoon,Twig
-}
+using System.Linq;
 
 
 public class SkinManager : MonoBehaviour
 {
     [Header("Parameters")]
-    [SerializeField] private KiddoSkins BaseSkins;
-    [SerializeField] private KiddoHats Hats;
-    [SerializeField] private KiddoItems Items;
-    private Spine.Skin MixedSkin = new Spine.Skin("MixedSkin");
-
-    [Header("UI Components")]
-    [SerializeField] private TMP_Dropdown baseskindropdownmenu;
-    [SerializeField] private TMP_Dropdown hatdropdownmenu;
-    [SerializeField] private TMP_Dropdown itemdropdownmenu;
-    private List<string> baseskinoptions;
-    private List<string> hatsoptions;
-    private List<string> itemdrops;
+    [Tooltip("Set Auto-Customizing")]
+    public bool IsRandomized;
+    [Tooltip("Manually Customize Skin Parts Here")]
+    [SpineSkin]public List<string> CustomizeSkinParts;
+    [Tooltip("Adding Skin Parts Group Prefix for Randomization")]
+    public List<string> SkinGroupPrefix;
+    
+   
 
     [Header("System")]
     [SerializeField] SkeletonAnimation skeletonAnimation;
     [SerializeField] public Spine.Skeleton skeleton;
     [SerializeField] public Spine.SkeletonData skeletonData;
+    private Spine.Skin MixedSkin = new Spine.Skin("MixedSkin");
+    [Tooltip("Do Not Edit | This list is auto generated")]
+    [SpineSkin] public List<string> AllSkinParts;
     void Start()
     {
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         skeleton = skeletonAnimation.Skeleton;
         skeletonData = skeleton.Data;
 
-        //InitializeSkin
-        DropdownOptionUpdate();
+        
+        InitializeData();
         GenerateSkin();
     }
 
-    void DropdownOptionUpdate()
+    
+    void InitializeData()
     {
-        
-        switch (baseskindropdownmenu.value)
+        if(AllSkinParts != null)
         {
-            case 0: BaseSkins = KiddoSkins.boy;  break;
-            case 1: BaseSkins = KiddoSkins.girl; break;
-            case 2: BaseSkins = KiddoSkins.georgie; break;
-            case 3: BaseSkins = KiddoSkins.shisuka; break;
-            case 4: BaseSkins = KiddoSkins.shinchan; break;
-            case 5: BaseSkins = KiddoSkins.pirate1; break;
-            case 6: BaseSkins = KiddoSkins.pirate2; break;
+            AllSkinParts.Clear();
         }
-
-        switch (hatdropdownmenu.value)
+        foreach(var skin in skeletonData.Skins)
         {
-            case 0: break;
-            case 1: Hats = KiddoHats.bandana1; break;
-            case 2: Hats = KiddoHats.bandana2; break;
-            case 3: Hats = KiddoHats.bandana3; break;
-        }
-
-        switch (itemdropdownmenu.value)
-        {
-            case 0: Items = KiddoItems.none; break;
-            case 1: Items = KiddoItems.redballoon; break;
-            case 2: Items = KiddoItems.yellowballoon; break;
-            case 3: Items = KiddoItems.blueballoon; break;
-            case 4: Items = KiddoItems.purpleballoon; break;
-            case 5: Items = KiddoItems.Twig; break;
-        }
-    }
-        
-
-        
-
-
-    void BaseSkinCustomization()
-    {
-        switch (BaseSkins)
-        {
-            case KiddoSkins.boy: MixedSkin.AddSkin(skeletonData.FindSkin("preset/town/boy01")); break;
-            case KiddoSkins.girl: MixedSkin.AddSkin(skeletonData.FindSkin("preset/town/girl01")); break;
-            case KiddoSkins.shisuka: MixedSkin.AddSkin(skeletonData.FindSkin("preset/town/shisuka")); break;
-            case KiddoSkins.georgie: MixedSkin.AddSkin(skeletonData.FindSkin("preset/town/georgie")); break;
-            case KiddoSkins.shinchan: MixedSkin.AddSkin(skeletonData.FindSkin("preset/town/shinchan")); break;
-            case KiddoSkins.pirate1: MixedSkin.AddSkin(skeletonData.FindSkin("preset/seaside/thief01")); break;
-            case KiddoSkins.pirate2: MixedSkin.AddSkin(skeletonData.FindSkin("preset/seaside/thief02")); break;
+            AllSkinParts.Add(skin.ToString());
         }
     }
 
-    void HatCustomization()
+    string RandomSelectionFromPrefix(string Prefix)
     {
-        switch (Hats)
-        {
-            case KiddoHats.bandana1: MixedSkin.AddSkin(skeletonData.FindSkin("hat/seaside/thief_bandana")); break;
-            case KiddoHats.bandana2: MixedSkin.AddSkin(skeletonData.FindSkin("hat/seaside/thief_bandana2")); break;
-            case KiddoHats.bandana3: MixedSkin.AddSkin(skeletonData.FindSkin("hat/seaside/thief_bandana3")); break;
-        }
-    }
+        List<string> FoundParts = new List<string>();
 
-    void ItemCustomization()
-    {
-        switch (Items)
+        foreach(string parts in AllSkinParts)
         {
-            case KiddoItems.none: MixedSkin.AddSkin(skeletonData.FindSkin("L_hand/town/_none")); break;
-            case KiddoItems.redballoon: MixedSkin.AddSkin(skeletonData.FindSkin("L_hand/town/red_balloon")); break;
-            case KiddoItems.yellowballoon: MixedSkin.AddSkin(skeletonData.FindSkin("L_hand/town/yellow_balloon")); break;
-            case KiddoItems.blueballoon: MixedSkin.AddSkin(skeletonData.FindSkin("L_hand/town/blue_balloon")); break;
-            case KiddoItems.purpleballoon: MixedSkin.AddSkin(skeletonData.FindSkin("L_hand/town/purple_balloon")); break;
-            case KiddoItems.Twig: MixedSkin.AddSkin(skeletonData.FindSkin("L_hand/town/twig")); break;
+            if (parts.StartsWith(Prefix))
+            {
+                FoundParts.Add(parts);
+            }
         }
+
+        return FoundParts[Random.Range(0, FoundParts.Count)];
     }
 
     public void GenerateSkin()
     {
-        //MixedSkin.Clear();
-        DropdownOptionUpdate();
+
         MixedSkin = new Spine.Skin("MixedSkin");
-        BaseSkinCustomization();
-        HatCustomization();
-        ItemCustomization();
+        if(!IsRandomized)//Manual Customization
+        {
+            foreach (string skinparts in CustomizeSkinParts)
+            {
+                MixedSkin.AddSkin(skeletonData.FindSkin(skinparts));
+            }
+        }
+        else //Randomized Auto-Customization
+        {
+            foreach(string groups in SkinGroupPrefix)
+            {
+                MixedSkin.AddSkin(skeletonData.FindSkin(RandomSelectionFromPrefix(groups)));
+            }
+        }
+
         skeleton.SetSkin(MixedSkin);
         skeleton.SetSlotsToSetupPose();
+        
     }
 }
