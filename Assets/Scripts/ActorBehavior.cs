@@ -74,4 +74,6 @@ public class ActorBehavior : MonoBehaviour
         AnimControl.QueueIdleAnim();
 
     }
+
+    
 }

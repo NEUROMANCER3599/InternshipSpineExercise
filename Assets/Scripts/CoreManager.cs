@@ -2,17 +2,22 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class CoreManager : MonoBehaviour
 {
     [Header("UI Components")]
     [SerializeField] private TextMeshProUGUI SelectionDisplaytxt;
     [SerializeField] private TMP_Dropdown SkinPartsOptions;
+    [SerializeField] private Transform SkinPartsListDisplayView;
+    [SerializeField] private Transform CurrentSkinPartsDisplayView;
 
     [Header("System")]
+    [SerializeField] private GameObject ScrollViewItemPrefab;
+    [SerializeField] private List<ScrollViewItemDisplay> SkinPartsListDisplayItems;
+    [SerializeField] private List<ScrollViewItemDisplay> CurrentSkinPartDisplayItems;
     private Camera _mainCamera;
     private GameObject SelectedObj;
-
     void Awake()
     {
         //Auto Initialize
@@ -56,7 +61,8 @@ public class CoreManager : MonoBehaviour
             if (SelectedObj.GetComponentInParent<SkinManager>())
             {
                 SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
-                UpdateSkinPartsList(_skinManager);
+                UpdateAllSkinPartsList(_skinManager);
+                UpdateCurrentSkinPartsView(_skinManager);
             }
 
             if (SelectedObj.GetComponentInParent<CharacterDetailDisplay>())
@@ -93,6 +99,8 @@ public class CoreManager : MonoBehaviour
         {
             if (SelectedObj != null) SelectedObj = null; Debug.Log("Object Unselected");
             SelectionDisplaytxt.text = "";
+            OnClearItems();
+
         }
     }
 
@@ -117,13 +125,13 @@ public class CoreManager : MonoBehaviour
        
     }
 
-    public void SelectionDisplayText(string name, Color32 textcolor)
+    private void SelectionDisplayText(string name, Color32 textcolor)
     {
         SelectionDisplaytxt.text = "Selecting: " + name;
         SelectionDisplaytxt.color = textcolor;
     }
 
-    public void UpdateSkinPartsList(SkinManager skinManager)
+    private void UpdateAllSkinPartsList(SkinManager skinManager)
     {
         foreach(var skinparts in skinManager.AllSkinParts)
         {
@@ -131,12 +139,39 @@ public class CoreManager : MonoBehaviour
         }
     }
 
-    public void OnClearSkin()
+    public void OnClearItems()
     {
         if(SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
         {
             SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
-            _skinManager.ClearItem();
+            _skinManager.ClearSkinEditParts();
+            
+            ClearSkinPartsListDisplay();
+            //ClearCurrentSkinPartDisplay();
+        }
+    }
+
+    private void ClearSkinPartsListDisplay()
+    {
+        if (SkinPartsListDisplayItems != null)
+        {
+            foreach (var items in SkinPartsListDisplayItems)
+            {
+                Destroy(items.gameObject);
+            }
+            SkinPartsListDisplayItems.Clear();
+        }
+    }
+
+    private void ClearCurrentSkinPartDisplay()
+    {
+        if(CurrentSkinPartDisplayItems != null)
+        {
+            foreach(var items in CurrentSkinPartDisplayItems)
+            {
+                Destroy(items.gameObject);
+            }
+            CurrentSkinPartDisplayItems.Clear();
         }
     }
 
@@ -146,6 +181,60 @@ public class CoreManager : MonoBehaviour
         {
             SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
             _skinManager.RandomizeSkin();
+            UpdateCurrentSkinPartsView(_skinManager);
         }
     }
+
+    private string SelectingSkinPart()
+    {
+        int pickeditemindex = SkinPartsOptions.value;
+        string pickeditemdirectory = SkinPartsOptions.options[pickeditemindex].text;
+        return pickeditemdirectory;
+    }
+
+    public void OnAddSkinItem()
+    {
+            if (SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
+            {
+                SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
+                _skinManager.AddItem(SelectingSkinPart());
+                SkinPartsListDisplayItems.Add(CreateScrollViewItem(SelectingSkinPart(),SkinPartsListDisplayView));
+            }
+    }
+
+    public void OnCreateSkin()
+    {
+        if (SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
+        {
+            SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
+            _skinManager.CreateSkin();
+            UpdateCurrentSkinPartsView(_skinManager);
+        }
+    }
+
+    private void UpdateCurrentSkinPartsView(SkinManager _SkinM)
+    {
+        if(CurrentSkinPartDisplayItems != null)
+        {
+            ClearCurrentSkinPartDisplay();
+        }
+        foreach(var items in _SkinM.WornSkinParts)
+        {
+            CurrentSkinPartDisplayItems.Add(CreateScrollViewItem(items, CurrentSkinPartsDisplayView));
+            
+        }
+    }
+
+    private ScrollViewItemDisplay CreateScrollViewItem(string displaytext, Transform SpawnContainer)
+    {
+        var ScrollViewItem = Instantiate(ScrollViewItemPrefab, SpawnContainer);
+        ScrollViewItem.GetComponent<ScrollViewItemDisplay>().WriteText(displaytext);
+
+        return ScrollViewItem.GetComponent<ScrollViewItemDisplay>();
+            
+    }
+
+   
+   
+
 }

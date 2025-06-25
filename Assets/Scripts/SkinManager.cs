@@ -4,6 +4,7 @@ using Spine.Unity;
 using Spine.Unity.AttachmentTools;
 using TMPro;
 using System.Linq;
+using UnityEngine.UI;
 
 
 public class SkinManager : MonoBehaviour
@@ -28,9 +29,11 @@ public class SkinManager : MonoBehaviour
     [SpineSkin] public List<string> AllSkinParts;
     [Tooltip("Do Not Edit | This list is auto generated")]
     [SpineSkin] public List<string> WornSkinParts;
-    
+    [Tooltip("Do Not Edit | This list is auto generated")]
+    [SpineSkin] public List<string> RuntimeEditSkinPartsList;
 
-    
+
+
     public void InitializeData()
     {
         skeletonAnimation = GetComponent<SkeletonAnimation>();
@@ -94,7 +97,7 @@ public class SkinManager : MonoBehaviour
 
     public void RandomizeSkin()
     {
-        ClearItem();
+        ResetItem();
         MixedSkin = new Spine.Skin("MixedSkin");
         foreach (string groups in SkinGroupPrefix)
         {
@@ -106,13 +109,44 @@ public class SkinManager : MonoBehaviour
         skeleton.SetSlotsToSetupPose();
     }
 
-    public void ClearItem()
+    public void ResetItem()
     {
         MixedSkin.Clear();
         WornSkinParts.Clear();
+        //RuntimeEditSkinPartsList.Clear();
         //MixedSkin.AddSkin(skeletonData.FindSkin(RandomSelectionFromPrefix(DefaultSkinKeyword)));
         skeleton.SetSkin(MixedSkin);
         skeleton.SetSlotsToSetupPose();
 
     }
+
+    public void ClearSkinEditParts()
+    {
+        RuntimeEditSkinPartsList.Clear();
+    }
+
+    public void AddItem(string SelectedItem)
+    {
+        RuntimeEditSkinPartsList.Add(SelectedItem);
+    }
+
+    public void CreateSkin()
+    {
+        if(RuntimeEditSkinPartsList != null)
+        {
+            ResetItem();
+            MixedSkin = new Spine.Skin("MixedSkin");
+
+            foreach (string skinparts in RuntimeEditSkinPartsList)
+            {
+                MixedSkin.AddSkin(skeletonData.FindSkin(skinparts));
+                WornSkinParts.Add(skinparts);
+            }
+
+            skeleton.SetSkin(MixedSkin);
+            skeleton.SetSlotsToSetupPose();
+        }
+    }
+
+   
 }
