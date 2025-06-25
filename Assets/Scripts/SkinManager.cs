@@ -9,6 +9,7 @@ using System.Linq;
 public class SkinManager : MonoBehaviour
 {
     [Header("Parameters")]
+    public string DefaultSkinKeyword = "default";
     [Tooltip("Set Auto-Customizing")]
     public bool IsRandomized;
     [Tooltip("Manually Customize Skin Parts Here")]
@@ -25,21 +26,18 @@ public class SkinManager : MonoBehaviour
     private Spine.Skin MixedSkin = new Spine.Skin("MixedSkin");
     [Tooltip("Do Not Edit | This list is auto generated")]
     [SpineSkin] public List<string> AllSkinParts;
-    void Start()
+    [Tooltip("Do Not Edit | This list is auto generated")]
+    [SpineSkin] public List<string> WornSkinParts;
+    
+
+    
+    public void InitializeData()
     {
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         skeleton = skeletonAnimation.Skeleton;
         skeletonData = skeleton.Data;
 
-        
-        InitializeData();
-        GenerateSkin();
-    }
-
-    
-    void InitializeData()
-    {
-        if(AllSkinParts != null)
+        if (AllSkinParts != null)
         {
             AllSkinParts.Clear();
         }
@@ -47,6 +45,8 @@ public class SkinManager : MonoBehaviour
         {
             AllSkinParts.Add(skin.ToString());
         }
+
+        GenerateSkinOnStart();
     }
 
     string RandomSelectionFromPrefix(string Prefix)
@@ -64,7 +64,7 @@ public class SkinManager : MonoBehaviour
         return FoundParts[Random.Range(0, FoundParts.Count)];
     }
 
-    public void GenerateSkin()
+    public void GenerateSkinOnStart()
     {
 
         MixedSkin = new Spine.Skin("MixedSkin");
@@ -73,18 +73,46 @@ public class SkinManager : MonoBehaviour
             foreach (string skinparts in CustomizeSkinParts)
             {
                 MixedSkin.AddSkin(skeletonData.FindSkin(skinparts));
+                WornSkinParts.Add(skinparts);
             }
         }
         else //Randomized Auto-Customization
         {
             foreach(string groups in SkinGroupPrefix)
             {
-                MixedSkin.AddSkin(skeletonData.FindSkin(RandomSelectionFromPrefix(groups)));
+                string partfound = RandomSelectionFromPrefix(groups);
+                MixedSkin.AddSkin(skeletonData.FindSkin(partfound));
+                WornSkinParts.Add(partfound);
+                
             }
         }
 
         skeleton.SetSkin(MixedSkin);
         skeleton.SetSlotsToSetupPose();
         
+    }
+
+    public void RandomizeSkin()
+    {
+        ClearItem();
+        MixedSkin = new Spine.Skin("MixedSkin");
+        foreach (string groups in SkinGroupPrefix)
+        {
+            string partfound = RandomSelectionFromPrefix(groups);
+            MixedSkin.AddSkin(skeletonData.FindSkin(partfound));
+            WornSkinParts.Add(partfound);
+        }
+        skeleton.SetSkin(MixedSkin);
+        skeleton.SetSlotsToSetupPose();
+    }
+
+    public void ClearItem()
+    {
+        MixedSkin.Clear();
+        WornSkinParts.Clear();
+        //MixedSkin.AddSkin(skeletonData.FindSkin(RandomSelectionFromPrefix(DefaultSkinKeyword)));
+        skeleton.SetSkin(MixedSkin);
+        skeleton.SetSlotsToSetupPose();
+
     }
 }

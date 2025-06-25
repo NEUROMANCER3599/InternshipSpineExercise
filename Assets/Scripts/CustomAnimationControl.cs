@@ -13,7 +13,7 @@ public class CustomAnimationControl : MonoBehaviour
     [Header("Parameters")]
     public string IdleAnimationGroupKeyword = "idle";
 
-
+    
     [Header("System")]
     SkeletonAnimation skeletonAnimation;
     public Spine.AnimationState spineAnimationState;
@@ -23,18 +23,13 @@ public class CustomAnimationControl : MonoBehaviour
     [SpineAnimation] public List<string> AllAnimation;
 
 
-    void Start()
+    public void InitializeData()
     {
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         spineAnimationState = skeletonAnimation.AnimationState;
         skeleton = skeletonAnimation.Skeleton;
         skeletonData = skeleton.Data;
-        InitializeData();
-        PlayRandomAnimationFromGroup(AnimPlayBackType.Set, IdleAnimationGroupKeyword, true);
-    }
 
-    void InitializeData()
-    {
         if (AllAnimation != null)
         {
             AllAnimation.Clear();
@@ -43,6 +38,8 @@ public class CustomAnimationControl : MonoBehaviour
         {
             AllAnimation.Add(skin.ToString());
         }
+
+        SetIdleAnim();
     }
 
     public void PlayRandomAnimationFromGroup(AnimPlayBackType playtype,string groupkeyword,bool SetLoop) //Type Prefix of animation directory

@@ -17,7 +17,8 @@ public class ActorBehavior : MonoBehaviour
     [Header("System")]
     [SerializeField] private CustomAnimationControl AnimControl;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    
+    public void InitializeData()
     {
         AnimControl = GetComponent<CustomAnimationControl>();
     }
