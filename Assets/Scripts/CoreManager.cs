@@ -29,6 +29,10 @@ public class CoreManager : MonoBehaviour
     [SerializeField] private List<ScrollViewItemDisplay> SkinRandomGroupDisplayItems;
     private Camera _mainCamera;
     private GameObject SelectedObj;
+    private ActorBehavior Selected_ActorBehavior;
+    private CustomAnimationControl Selected_AnimControl;
+    private CharacterDetailDisplay Selected_CharDetail;
+    private SkinManager Selected_SkinManager;
     void Awake()
     {
         //Auto Initialize
@@ -53,47 +57,50 @@ public class CoreManager : MonoBehaviour
 
     private void Update()
     {
-        if(SelectedObj != null && SelectedObj.GetComponentInParent<CustomAnimationControl>())
-        {
-            CustomAnimationControl AnimControl = SelectedObj.GetComponentInParent<CustomAnimationControl>();
-            UpdateCurrentPlayingAnimation(AnimControl);
-        }
+        if (Selected_AnimControl == null) return;
+
+        UpdateCurrentPlayingAnimation(Selected_AnimControl);
+
     }
 
     public void OnSelect(InputAction.CallbackContext context)
     {
-        if (!context.started) return;
-
         var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
 
-        if (rayHit.collider)
-        {
-            Debug.Log("Collider Clicked");
-            SelectedObj = rayHit.collider.gameObject;
+        if (!context.started) return;
 
-            if (SelectedObj.GetComponentInParent<ActorBehavior>())
-            {
-                ActorBehavior Actor = SelectedObj.GetComponentInParent<ActorBehavior>();
+        if (!rayHit.collider) return;
+            
+        SelectedObj = rayHit.collider.gameObject;
 
-                Actor.OnClicked();
-                UpdateActorSpeedDisplay(Actor);
-            }
+        ComponentsRefUpdate();
+    }
 
-            if (SelectedObj.GetComponentInParent<SkinManager>())
-            {
-                SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
-                UpdateAllSkinPartsOptions(_skinManager);
-                UpdateCurrentSkinPartsView(_skinManager);
-                UpdateSkinGroupPrefixView(_skinManager);
-            }
-
-            if (SelectedObj.GetComponentInParent<CharacterDetailDisplay>())
-            {
-                CharacterDetailDisplay detail = SelectedObj.GetComponentInParent<CharacterDetailDisplay>();
-                SelectionDisplayText(detail.DisplayName,detail.DisplayTextColor);
-            }
+    private void ComponentsRefUpdate()
+    {
+        if (!SelectedObj){
+            Selected_ActorBehavior = null; 
+            Selected_SkinManager = null; 
+            Selected_CharDetail = null; 
+            return;
         }
-    
+            
+        if (!SelectedObj.GetComponentInParent<ActorBehavior>()) return;
+        if (!SelectedObj.GetComponentInParent<SkinManager>()) return;
+        if (!SelectedObj.GetComponentInParent<CharacterDetailDisplay>()) return;
+
+        Selected_ActorBehavior = SelectedObj.GetComponentInParent<ActorBehavior>();
+        Selected_SkinManager = SelectedObj.GetComponentInParent<SkinManager>();
+        Selected_CharDetail = SelectedObj.GetComponentInParent<CharacterDetailDisplay>();
+
+        Selected_ActorBehavior.OnClicked();
+        UpdateActorSpeedDisplay(Selected_ActorBehavior);
+
+        UpdateAllSkinPartsOptions(Selected_SkinManager);
+        UpdateCurrentSkinPartsView(Selected_SkinManager);
+        UpdateSkinGroupPrefixView(Selected_SkinManager);
+
+        SelectionDisplayText(Selected_CharDetail.DisplayName, Selected_CharDetail.DisplayTextColor);
 
     }
 
@@ -105,7 +112,9 @@ public class CoreManager : MonoBehaviour
 
         if (!rayHit.collider)
         {
-            if (SelectedObj != null) SelectedObj = null; Debug.Log("Object Unselected");
+            if(SelectedObj == null) return; 
+            SelectedObj = null;
+            ComponentsRefUpdate();
             SelectionDisplaytxt.text = "";
             OnClearItems();
 
@@ -114,23 +123,18 @@ public class CoreManager : MonoBehaviour
 
     public void MoveOnClick(InputAction.CallbackContext context)
     {
-        if (!context.started) return;
-
         var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
 
-        if (!rayHit.collider)
-        {
-            if (SelectedObj != null)
-            {
-                if (SelectedObj.GetComponentInParent<ActorBehavior>())
-                {
-                    ActorBehavior Actor = SelectedObj.GetComponentInParent<ActorBehavior>();
+        if (!context.started) return;
 
-                    Actor.MoveOnClick(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
-                }
-            }
-        }
-       
+        if (rayHit.collider) return;
+
+        if (!Selected_ActorBehavior) return;
+
+        Selected_ActorBehavior = SelectedObj.GetComponentInParent<ActorBehavior>();
+
+        Selected_ActorBehavior.MoveOnClick(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
+
     }
 
     private void SelectionDisplayText(string name, Color32 textcolor)
@@ -149,24 +153,18 @@ public class CoreManager : MonoBehaviour
 
     public void OnClearItems()
     {
-        if(SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
-        {
-            SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
-            _skinManager.ClearSkinEditParts();
+       if(!Selected_SkinManager) return;
 
-            ClearScrollViewItemDisplay(SkinPartsListDisplayItems);
-            //ClearCurrentSkinPartDisplay();
-        }
+       Selected_SkinManager.ClearSkinEditParts();
+
+       ClearScrollViewItemDisplay(SkinPartsListDisplayItems);
     }
 
     public void OnRandomizeSkin()
     {
-        if (SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
-        {
-            SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
-            _skinManager.RandomizeSkin();
-            UpdateCurrentSkinPartsView(_skinManager);
-        }
+        if (!Selected_SkinManager) return;
+        Selected_SkinManager.RandomizeSkin();
+        UpdateCurrentSkinPartsView(Selected_SkinManager);
     }
 
     private string SelectingSkinPart()
@@ -178,22 +176,16 @@ public class CoreManager : MonoBehaviour
 
     public void OnAddSkinItem()
     {
-            if (SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
-            {
-                SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
-                _skinManager.AddItem(SelectingSkinPart());
-                SkinPartsListDisplayItems.Add(CreateScrollViewItem(SelectingSkinPart(),SkinPartsListDisplayView));
-            }
+        if (!Selected_SkinManager) return;
+        Selected_SkinManager.AddItem(SelectingSkinPart());
+        SkinPartsListDisplayItems.Add(CreateScrollViewItem(SelectingSkinPart(),SkinPartsListDisplayView));
     }
 
     public void OnCreateSkin()
     {
-        if (SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
-        {
-            SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
-            _skinManager.CreateSkin();
-            UpdateCurrentSkinPartsView(_skinManager);
-        }
+        if (!Selected_SkinManager) return;
+        Selected_SkinManager.CreateSkin();
+        UpdateCurrentSkinPartsView(Selected_SkinManager);
     }
 
     private void UpdateCurrentSkinPartsView(SkinManager _SkinM)
@@ -219,37 +211,27 @@ public class CoreManager : MonoBehaviour
 
     public void OnClearSkinGroupPrefix()
     {
-        if (SelectedObj.GetComponentInParent<SkinManager>())
-        {
-            SkinManager _skinM = SelectedObj.GetComponentInParent<SkinManager>();
-            _skinM.SkinGroupPrefix.Clear();
-            ClearScrollViewItemDisplay(SkinRandomGroupDisplayItems);
-        }
+        if (!Selected_SkinManager) return;
+        Selected_SkinManager.SkinGroupPrefix.Clear();
+        ClearScrollViewItemDisplay(SkinRandomGroupDisplayItems);
     }
 
     public void OnAddSkinGroupPrefix()
     {
-        if (SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
-        {
-            SkinManager _skinM = SelectedObj.GetComponentInParent<SkinManager>();
+            if (!Selected_SkinManager) return;
             string prefixinput = SkinGroupPrefixInput.text;
-            _skinM.SkinGroupPrefix.Add(prefixinput);
-            UpdateSkinGroupPrefixView(_skinM);
-        }
+            Selected_SkinManager.SkinGroupPrefix.Add(prefixinput);
+            UpdateSkinGroupPrefixView(Selected_SkinManager);
     }
 
     public void OnEditSpeed()
     {
-        if(SelectedObj != null  && SelectedObj.GetComponentInParent<ActorBehavior>())
-        {
-            ActorBehavior actor = SelectedObj.GetComponentInParent<ActorBehavior>();
-            if (float.TryParse(ActorSpeedInput.text, out _))
-            {
-                actor.ChangeSpeed(float.Parse(ActorSpeedInput.text));
-                UpdateActorSpeedDisplay(actor);
-            }
-            
-        }
+        if (!Selected_ActorBehavior) return;
+        if (!float.TryParse(ActorSpeedInput.text, out _)) return;
+
+        Selected_ActorBehavior.ChangeSpeed(float.Parse(ActorSpeedInput.text));
+        UpdateActorSpeedDisplay(Selected_ActorBehavior);
+
     }
 
     private void UpdateActorSpeedDisplay(ActorBehavior actor)
@@ -259,14 +241,15 @@ public class CoreManager : MonoBehaviour
 
     private void ClearScrollViewItemDisplay(List<ScrollViewItemDisplay> ScrollViewItems)
     {
-        if (ScrollViewItems != null)
-        {
+            if (ScrollViewItems == null) return;
+
             foreach (var items in ScrollViewItems)
             {
                 Destroy(items.gameObject);
             }
+
             ScrollViewItems.Clear();
-        }
+
     }
 
     private void UpdateCurrentPlayingAnimation(CustomAnimationControl AnimC)
@@ -274,7 +257,6 @@ public class CoreManager : MonoBehaviour
         string displayvalue = AnimC.skeletonAnimation.AnimationName;
         CurrentAnimationDisplay.text = "Currently Playing: " + displayvalue;
     }
-
 
     private ScrollViewItemDisplay CreateScrollViewItem(string displaytext, Transform SpawnContainer)
     {
@@ -284,8 +266,5 @@ public class CoreManager : MonoBehaviour
         return ScrollViewItem.GetComponent<ScrollViewItemDisplay>();
             
     }
-
-   
-   
 
 }

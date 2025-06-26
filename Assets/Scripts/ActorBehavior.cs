@@ -42,9 +42,9 @@ public class ActorBehavior : MonoBehaviour
 
     public void MoveOnClick(Vector2 clickedposition)
     {
-        if (MoveSpeed != 0)
-        {
-            Debug.Log("Moving " + gameObject.name + " to position: " + clickedposition);
+            if (MoveSpeed == 0) return;
+
+
             float distance = Vector2.Distance(clickedposition, transform.position);
             transform.DOMove(new Vector3(clickedposition.x, clickedposition.y), distance * MoveSpeed);
             movementInterval = distance * MoveSpeed;
@@ -59,15 +59,13 @@ public class ActorBehavior : MonoBehaviour
             {
                 AnimControl.skeleton.ScaleX = -1;
             }
-        }
+        
 
     }
 
 
     public void OnClicked()
     {
-        Debug.Log(gameObject.name + " Selected");
-
         int RandomGroup = Random.Range(0, 2);
 
         AnimControl.PlayRandomAnimationFromGroup(AnimPlayBackType.Set, InteractedAnimGroupKeyword, false);

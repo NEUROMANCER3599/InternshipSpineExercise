@@ -119,8 +119,6 @@ public class SkinManager : MonoBehaviour
     {
         MixedSkin.Clear();
         WornSkinParts.Clear();
-        //RuntimeEditSkinPartsList.Clear();
-        //MixedSkin.AddSkin(skeletonData.FindSkin(RandomSelectionFromPrefix(DefaultSkinKeyword)));
         skeleton.SetSkin(MixedSkin);
         skeleton.SetSlotsToSetupPose();
 
