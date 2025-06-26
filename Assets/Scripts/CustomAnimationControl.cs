@@ -15,7 +15,7 @@ public class CustomAnimationControl : MonoBehaviour
 
     
     [Header("System")]
-    SkeletonAnimation skeletonAnimation;
+    public SkeletonAnimation skeletonAnimation;
     public Spine.AnimationState spineAnimationState;
     public Spine.Skeleton skeleton;
     public Spine.SkeletonData skeletonData;

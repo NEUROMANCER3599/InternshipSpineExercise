@@ -75,5 +75,10 @@ public class ActorBehavior : MonoBehaviour
 
     }
 
+    public void ChangeSpeed(float newspeed)
+    {
+        MoveSpeed = newspeed;
+    }    
+
     
 }

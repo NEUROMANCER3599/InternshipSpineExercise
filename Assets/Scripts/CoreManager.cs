@@ -16,6 +16,12 @@ public class CoreManager : MonoBehaviour
     [SerializeField] private TMP_InputField SkinGroupPrefixInput;
     [SerializeField] private Transform SkinGroupPrefixDisplayView;
 
+    [Header("UI Components | Actor Preferences")]
+    [SerializeField] private TextMeshProUGUI ActorSpeedDisplay;
+    [SerializeField] private TextMeshProUGUI CurrentAnimationDisplay;
+    [SerializeField] private TMP_InputField ActorSpeedInput;
+
+
     [Header("System | Do not change in runtime")]
     [SerializeField] private GameObject ScrollViewItemPrefab;
     [SerializeField] private List<ScrollViewItemDisplay> SkinPartsListDisplayItems;
@@ -45,6 +51,15 @@ public class CoreManager : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if(SelectedObj != null && SelectedObj.GetComponentInParent<CustomAnimationControl>())
+        {
+            CustomAnimationControl AnimControl = SelectedObj.GetComponentInParent<CustomAnimationControl>();
+            UpdateCurrentPlayingAnimation(AnimControl);
+        }
+    }
+
     public void OnSelect(InputAction.CallbackContext context)
     {
         if (!context.started) return;
@@ -61,6 +76,7 @@ public class CoreManager : MonoBehaviour
                 ActorBehavior Actor = SelectedObj.GetComponentInParent<ActorBehavior>();
 
                 Actor.OnClicked();
+                UpdateActorSpeedDisplay(Actor);
             }
 
             if (SelectedObj.GetComponentInParent<SkinManager>())
@@ -222,6 +238,25 @@ public class CoreManager : MonoBehaviour
         }
     }
 
+    public void OnEditSpeed()
+    {
+        if(SelectedObj != null  && SelectedObj.GetComponentInParent<ActorBehavior>())
+        {
+            ActorBehavior actor = SelectedObj.GetComponentInParent<ActorBehavior>();
+            if (float.TryParse(ActorSpeedInput.text, out _))
+            {
+                actor.ChangeSpeed(float.Parse(ActorSpeedInput.text));
+                UpdateActorSpeedDisplay(actor);
+            }
+            
+        }
+    }
+
+    private void UpdateActorSpeedDisplay(ActorBehavior actor)
+    {
+        ActorSpeedDisplay.text = "Actor Speed: " + actor.MoveSpeed.ToString();
+    }
+
     private void ClearScrollViewItemDisplay(List<ScrollViewItemDisplay> ScrollViewItems)
     {
         if (ScrollViewItems != null)
@@ -232,6 +267,12 @@ public class CoreManager : MonoBehaviour
             }
             ScrollViewItems.Clear();
         }
+    }
+
+    private void UpdateCurrentPlayingAnimation(CustomAnimationControl AnimC)
+    {
+        string displayvalue = AnimC.skeletonAnimation.AnimationName;
+        CurrentAnimationDisplay.text = "Currently Playing: " + displayvalue;
     }
 
 
