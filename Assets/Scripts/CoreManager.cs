@@ -6,16 +6,21 @@ using UnityEngine.UIElements;
 
 public class CoreManager : MonoBehaviour
 {
-    [Header("UI Components")]
+    [Header("UI Components | Skin Menu")]
     [SerializeField] private TextMeshProUGUI SelectionDisplaytxt;
     [SerializeField] private TMP_Dropdown SkinPartsOptions;
     [SerializeField] private Transform SkinPartsListDisplayView;
     [SerializeField] private Transform CurrentSkinPartsDisplayView;
 
-    [Header("System")]
+    [Header("UI Components | Skin Preferences")]
+    [SerializeField] private TMP_InputField SkinGroupPrefixInput;
+    [SerializeField] private Transform SkinGroupPrefixDisplayView;
+
+    [Header("System | Do not change in runtime")]
     [SerializeField] private GameObject ScrollViewItemPrefab;
     [SerializeField] private List<ScrollViewItemDisplay> SkinPartsListDisplayItems;
     [SerializeField] private List<ScrollViewItemDisplay> CurrentSkinPartDisplayItems;
+    [SerializeField] private List<ScrollViewItemDisplay> SkinRandomGroupDisplayItems;
     private Camera _mainCamera;
     private GameObject SelectedObj;
     void Awake()
@@ -61,8 +66,9 @@ public class CoreManager : MonoBehaviour
             if (SelectedObj.GetComponentInParent<SkinManager>())
             {
                 SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
-                UpdateAllSkinPartsList(_skinManager);
+                UpdateAllSkinPartsOptions(_skinManager);
                 UpdateCurrentSkinPartsView(_skinManager);
+                UpdateSkinGroupPrefixView(_skinManager);
             }
 
             if (SelectedObj.GetComponentInParent<CharacterDetailDisplay>())
@@ -71,21 +77,7 @@ public class CoreManager : MonoBehaviour
                 SelectionDisplayText(detail.DisplayName,detail.DisplayTextColor);
             }
         }
-        /*
-        else
-        {
-            if (SelectedObj != null)
-            {
-                if (SelectedObj.GetComponentInParent<ActorBehavior>())
-                {
-                    ActorBehavior Actor = SelectedObj.GetComponentInParent<ActorBehavior>();
-
-                    Actor.MoveOnClick(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
-                }
-            }
-
-        }
-        */
+    
 
     }
 
@@ -131,7 +123,7 @@ public class CoreManager : MonoBehaviour
         SelectionDisplaytxt.color = textcolor;
     }
 
-    private void UpdateAllSkinPartsList(SkinManager skinManager)
+    private void UpdateAllSkinPartsOptions(SkinManager skinManager)
     {
         foreach(var skinparts in skinManager.AllSkinParts)
         {
@@ -145,33 +137,9 @@ public class CoreManager : MonoBehaviour
         {
             SkinManager _skinManager = SelectedObj.GetComponentInParent<SkinManager>();
             _skinManager.ClearSkinEditParts();
-            
-            ClearSkinPartsListDisplay();
+
+            ClearScrollViewItemDisplay(SkinPartsListDisplayItems);
             //ClearCurrentSkinPartDisplay();
-        }
-    }
-
-    private void ClearSkinPartsListDisplay()
-    {
-        if (SkinPartsListDisplayItems != null)
-        {
-            foreach (var items in SkinPartsListDisplayItems)
-            {
-                Destroy(items.gameObject);
-            }
-            SkinPartsListDisplayItems.Clear();
-        }
-    }
-
-    private void ClearCurrentSkinPartDisplay()
-    {
-        if(CurrentSkinPartDisplayItems != null)
-        {
-            foreach(var items in CurrentSkinPartDisplayItems)
-            {
-                Destroy(items.gameObject);
-            }
-            CurrentSkinPartDisplayItems.Clear();
         }
     }
 
@@ -214,16 +182,58 @@ public class CoreManager : MonoBehaviour
 
     private void UpdateCurrentSkinPartsView(SkinManager _SkinM)
     {
-        if(CurrentSkinPartDisplayItems != null)
-        {
-            ClearCurrentSkinPartDisplay();
-        }
+      
+        ClearScrollViewItemDisplay(CurrentSkinPartDisplayItems);
+
         foreach(var items in _SkinM.WornSkinParts)
         {
             CurrentSkinPartDisplayItems.Add(CreateScrollViewItem(items, CurrentSkinPartsDisplayView));
             
         }
     }
+
+    private void UpdateSkinGroupPrefixView(SkinManager _SkinM)
+    {
+        ClearScrollViewItemDisplay(SkinRandomGroupDisplayItems);
+        foreach (var items in _SkinM.SkinGroupPrefix)
+        {
+            SkinRandomGroupDisplayItems.Add(CreateScrollViewItem(items, SkinGroupPrefixDisplayView));
+        }
+    }
+
+    public void OnClearSkinGroupPrefix()
+    {
+        if (SelectedObj.GetComponentInParent<SkinManager>())
+        {
+            SkinManager _skinM = SelectedObj.GetComponentInParent<SkinManager>();
+            _skinM.SkinGroupPrefix.Clear();
+            ClearScrollViewItemDisplay(SkinRandomGroupDisplayItems);
+        }
+    }
+
+    public void OnAddSkinGroupPrefix()
+    {
+        if (SelectedObj != null && SelectedObj.GetComponentInParent<SkinManager>())
+        {
+            SkinManager _skinM = SelectedObj.GetComponentInParent<SkinManager>();
+            string prefixinput = SkinGroupPrefixInput.text;
+            _skinM.SkinGroupPrefix.Add(prefixinput);
+            UpdateSkinGroupPrefixView(_skinM);
+        }
+    }
+
+    private void ClearScrollViewItemDisplay(List<ScrollViewItemDisplay> ScrollViewItems)
+    {
+        if (ScrollViewItems != null)
+        {
+            foreach (var items in ScrollViewItems)
+            {
+                Destroy(items.gameObject);
+            }
+            ScrollViewItems.Clear();
+        }
+    }
+
 
     private ScrollViewItemDisplay CreateScrollViewItem(string displaytext, Transform SpawnContainer)
     {

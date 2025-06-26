@@ -5,6 +5,7 @@ using Spine.Unity.AttachmentTools;
 using TMPro;
 using System.Linq;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 
 public class SkinManager : MonoBehaviour
@@ -62,6 +63,11 @@ public class SkinManager : MonoBehaviour
             {
                 FoundParts.Add(parts);
             }
+        }
+
+        if(FoundParts == null)
+        {
+            return null;
         }
 
         return FoundParts[Random.Range(0, FoundParts.Count)];
