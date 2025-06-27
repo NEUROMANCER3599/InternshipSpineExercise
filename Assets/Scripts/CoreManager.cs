@@ -110,15 +110,16 @@ public class CoreManager : MonoBehaviour
 
         var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
 
-        if (!rayHit.collider)
-        {
-            if(SelectedObj == null) return; 
+        if (rayHit.collider) return;
+
+        if(SelectedObj == null) return;
+        
             SelectedObj = null;
             ComponentsRefUpdate();
             SelectionDisplaytxt.text = "";
             OnClearItems();
 
-        }
+
     }
 
     public void MoveOnClick(InputAction.CallbackContext context)
@@ -130,8 +131,6 @@ public class CoreManager : MonoBehaviour
         if (rayHit.collider) return;
 
         if (!Selected_ActorBehavior) return;
-
-        Selected_ActorBehavior = SelectedObj.GetComponentInParent<ActorBehavior>();
 
         Selected_ActorBehavior.MoveOnClick(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
 
@@ -193,7 +192,7 @@ public class CoreManager : MonoBehaviour
       
         ClearScrollViewItemDisplay(CurrentSkinPartDisplayItems);
 
-        foreach(var items in _SkinM.WornSkinParts)
+        foreach (var items in _SkinM.WornSkinParts)
         {
             CurrentSkinPartDisplayItems.Add(CreateScrollViewItem(items, CurrentSkinPartsDisplayView));
             
